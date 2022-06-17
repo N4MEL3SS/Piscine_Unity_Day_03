@@ -54,13 +54,13 @@
      <Compile Include="Assets/Scripts/visualPathSpawner.cs" />
      <Compile Include="Assets/Scripts/ennemyScript.cs" />
      <Compile Include="Assets/Scripts/towerScript.cs" />
+     <Compile Include="Assets/Scripts/UI/gameOverNext.cs" />
      <Compile Include="Assets/Scripts/rocketScript.cs" />
      <Compile Include="Assets/Scripts/UI/pauseMenu.cs" />
+     <Compile Include="Assets/Scripts/UI/KeyBind.cs" />
      <Compile Include="Assets/Scripts/explosion.cs" />
      <Compile Include="Assets/Scripts/UI/mainMenu.cs" />
      <Compile Include="Assets/Scripts/UI/towerInfosScript.cs" />
-     <Compile Include="Assets/Scripts/UI/gameOverNext.cs" />
-     <Compile Include="Assets/Scripts/UI/KeyBind.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />

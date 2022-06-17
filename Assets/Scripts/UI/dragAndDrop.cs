@@ -8,7 +8,8 @@ public class dragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public GameObject rangeObject;
     public Transform rangeTransform;
     public gameManager manager;
-    public float RangeScale = 2.8f;
+    public float rangeScale = 2.8f;
+    public float cameraCordinatZ = 1f;
     public bool isDraggable = true;
 
     private GameObject dragged;
@@ -32,8 +33,8 @@ public class dragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (isDraggable)
         {
-            var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 20f);
-            if (Camera.main != null)
+            var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraCordinatZ);
+            if(Camera.main != null)
             {
                 dragged.transform.position = Camera.main.ScreenToWorldPoint(position);
                 range.transform.position = Camera.main.ScreenToWorldPoint(position);
@@ -47,7 +48,7 @@ public class dragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             dragged = Instantiate(gameObject, transform);
             range = Instantiate(rangeObject, rangeTransform);
-            range.transform.localScale = new Vector3(tower.range / RangeScale, tower.range / RangeScale, 10f);
+            range.transform.localScale = new Vector3(tower.range / rangeScale, tower.range / rangeScale, 10f);
         }
     }
 
